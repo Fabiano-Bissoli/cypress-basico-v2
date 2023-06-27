@@ -182,7 +182,7 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         cy.get('#privacy a').should('have.attr', 'target', '_blank') // Verifiva que o link abra em outra aba 
     })
 
-    it.only('acessa a página da política de privacidade removendo o target e então clicando no link', function() {
+    it('acessa a página da política de privacidade removendo o target e então clicando no link', function() {
         cy.get('#privacy a') // Seleciona o elemento do link "Política de privacidade"
           .invoke('removeAttr', 'target') // Remove o target fazendo com que link abra na mesma aba e permitindo a validação do mesmo
           .click() // Clica no link "Política de privacidade"
